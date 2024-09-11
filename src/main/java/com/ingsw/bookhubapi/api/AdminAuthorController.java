@@ -33,7 +33,7 @@ public class AdminAuthorController {
     }
 
     @PostMapping
-    public ResponseEntity<Author> createCategory(@RequestBody Author author){
+    public ResponseEntity<Author> createAuthor(@RequestBody Author author){
         Author createdAuthor = adminAuthorService.create(author);
         return new ResponseEntity<Author>(createdAuthor, HttpStatus.CREATED);
     }
